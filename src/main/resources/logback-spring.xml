@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+    <include resource="org/springframework/boot/logging/logback/defaults.xml"/>
+
+    <!-- Default stdout console appender for HTTP mode and regular logging -->
+    <appender name="CONSOLE_STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <target>System.out</target>
+        <encoder>
+            <pattern>${CONSOLE_LOG_PATTERN:-%clr(%d{yyyy-MM-dd HH:mm:ss.SSS}){faint} %clr(${LOG_LEVEL_PATTERN:-%5p}) %clr(${PID:- }){magenta} %clr(---){faint} %clr([%15.15t]){faint} %clr(%-40.40logger{39}){cyan} %clr(:){faint} %m%n${LOG_EXCEPTION_CONVERSION_WORD:-%wEx}}</pattern>
+        </encoder>
+    </appender>
+
+    <!-- STDERR console appender specifically for STDIO MCP profile -->
+    <!-- Essential rule: In STDIO mode, stdout is reserved exclusively for JSON-RPC messages -->
+    <appender name="CONSOLE_STDERR" class="ch.qos.logback.core.ConsoleAppender">
+        <target>System.err</target>
+        <encoder>
+            <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <!-- Profile-specific logging setup -->
+    <springProfile name="stdio">
+        <root level="INFO">
+            <appender-ref ref="CONSOLE_STDERR"/>
+        </root>
+    </springProfile>
+
+    <springProfile name="!stdio">
+        <root level="INFO">
+            <appender-ref ref="CONSOLE_STDOUT"/>
+        </root>
+    </springProfile>
+</configuration>
+

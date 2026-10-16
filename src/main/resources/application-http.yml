@@ -1,0 +1,16 @@
+server:
+  address: 127.0.0.1
+  port: 8080
+
+spring:
+  main:
+    web-application-type: servlet
+
+  ai:
+    mcp:
+      server:
+        stdio: false
+        protocol: STREAMABLE
+        streamable-http:
+          mcp-endpoint: /mcp
+

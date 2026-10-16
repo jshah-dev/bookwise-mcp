@@ -1,0 +1,16 @@
+{
+  "mcpServers": {
+    "bookwise-stdio": {
+      "command": "java",
+      "args": [
+        "-jar",
+        "/ABSOLUTE/PATH/TO/bookwise-mcp-0.0.1-SNAPSHOT.jar",
+        "--spring.profiles.active=stdio"
+      ]
+    },
+    "bookwise-http": {
+      "url": "http://127.0.0.1:8080/mcp"
+    }
+  }
+}
+
