@@ -108,14 +108,14 @@ Package the executable JAR:
 ### Option A: STDIO Transport (Default for Local AI Editors)
 
 ```bash
-java -jar target/bookwise-mcp-0.0.1-SNAPSHOT.jar --spring.profiles.active=stdio
+java -jar target/bookwise-mcp-1.0.0.jar --spring.profiles.active=stdio
 ```
 *Note: In STDIO mode, web server is disabled (`web-application-type: none`) and logging routes to `stderr`.*
 
 ### Option B: Streamable HTTP Transport
 
 ```bash
-java -jar target/bookwise-mcp-0.0.1-SNAPSHOT.jar --spring.profiles.active=http
+java -jar target/bookwise-mcp-1.0.0.jar --spring.profiles.active=http
 ```
 *Endpoint: `http://127.0.0.1:8080/mcp`*
 

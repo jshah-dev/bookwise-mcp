@@ -8,12 +8,12 @@ This directory provides ready-to-use configuration files for connecting popular 
    - The AI editor launches BookWise as a local child process.
    - MCP protocol messages use `stdin`/`stdout`.
    - Logging is safely redirected to `stderr`.
-   - Command: `java -jar /PATH/TO/bookwise-mcp-0.0.1-SNAPSHOT.jar --spring.profiles.active=stdio`
+   - Command: `java -jar /PATH/TO/bookwise-mcp-1.0.0.jar --spring.profiles.active=stdio`
 
 2. **HTTP (Streamable HTTP)**
    - Run the server in a separate terminal:
      ```bash
-     java -jar target/bookwise-mcp-0.0.1-SNAPSHOT.jar --spring.profiles.active=http
+     java -jar target/bookwise-mcp-1.0.0.jar --spring.profiles.active=http
      ```
    - Connect your editor to: `http://127.0.0.1:8080/mcp`
 

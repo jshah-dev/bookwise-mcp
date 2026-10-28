@@ -46,7 +46,7 @@ public class OpenLibraryClient {
     private static final int MAX_LIMIT = 20;
 
     /** Descriptive User-Agent header required by the Open Library API Terms of Service. */
-    private static final String USER_AGENT = "BookWise-MCP/0.1.0 (https://github.com/jshah-dev/bookwise-mcp)";
+    private static final String USER_AGENT = "BookWise-MCP/1.0.0 (https://github.com/jshah-dev/bookwise-mcp)";
 
     private final RestClient restClient;
     private final OpenLibraryMapper mapper;

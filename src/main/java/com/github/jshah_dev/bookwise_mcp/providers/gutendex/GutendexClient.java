@@ -48,7 +48,7 @@ public class GutendexClient {
     private static final int MAX_LIMIT = 20;
 
     /** Descriptive User-Agent. */
-    private static final String USER_AGENT = "BookWise-MCP/0.1.0 (https://github.com/jshah-dev/bookwise-mcp)";
+    private static final String USER_AGENT = "BookWise-MCP/1.0.0 (https://github.com/jshah-dev/bookwise-mcp)";
 
     private final RestClient restClient;
     private final GutendexMapper mapper;
