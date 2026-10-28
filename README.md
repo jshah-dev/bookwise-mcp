@@ -1,6 +1,6 @@
 # BookWise MCP Server
 
-A standalone Model Context Protocol (MCP) server built with **Java 25**, **Spring Boot**, and **Spring AI**.
+A standalone Model Context Protocol (MCP) server built with **Java 21**, **Spring Boot**, and **Spring AI**.
 
 `bookwise-mcp` exposes book-discovery and metadata tools to AI editors (VS Code, Cursor, Windsurf, Claude Desktop, Claude Code, Continue.dev). The editor's LLM hosts the chat and reading list workflows while this server provides access to Open Library and Project Gutenberg (Gutendex).
 
@@ -19,7 +19,7 @@ A standalone Model Context Protocol (MCP) server built with **Java 25**, **Sprin
                                  ▼
                     ┌─────────────────────────┐
                     │     BookWise MCP        │
-                    │  (Spring Boot / Java 25)│
+                    │  (Spring Boot / Java 21)│
                     │                         │
                     │       BookTools         │
                     └────────────┬────────────┘
@@ -82,7 +82,7 @@ Retrieves metadata and available reading/download format URLs for a Project Gute
 
 ## Prerequisites
 
-- **Java**: JDK 25 or later.
+- **Java**: JDK 21 or later.
 - **Maven**: 3.9+ (or use the provided `./mvnw`).
 
 ---
